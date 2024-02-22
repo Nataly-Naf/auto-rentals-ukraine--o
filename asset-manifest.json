@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/auto-rentals-ukraine/static/css/main.1e6c510d.css",
-    "main.js": "/auto-rentals-ukraine/static/js/main.c21b8a37.js",
-    "static/js/266.c18fb188.chunk.js": "/auto-rentals-ukraine/static/js/266.c18fb188.chunk.js",
-    "static/js/496.2d57c923.chunk.js": "/auto-rentals-ukraine/static/js/496.2d57c923.chunk.js",
-    "static/js/705.32f6fbea.chunk.js": "/auto-rentals-ukraine/static/js/705.32f6fbea.chunk.js",
-    "index.html": "/auto-rentals-ukraine/index.html",
-    "main.1e6c510d.css.map": "/auto-rentals-ukraine/static/css/main.1e6c510d.css.map",
-    "main.c21b8a37.js.map": "/auto-rentals-ukraine/static/js/main.c21b8a37.js.map",
-    "266.c18fb188.chunk.js.map": "/auto-rentals-ukraine/static/js/266.c18fb188.chunk.js.map",
-    "496.2d57c923.chunk.js.map": "/auto-rentals-ukraine/static/js/496.2d57c923.chunk.js.map",
-    "705.32f6fbea.chunk.js.map": "/auto-rentals-ukraine/static/js/705.32f6fbea.chunk.js.map"
+    "main.css": "/auto-rentals-ukraine--o/static/css/main.1e6c510d.css",
+    "main.js": "/auto-rentals-ukraine--o/static/js/main.555ab49b.js",
+    "static/js/266.c18fb188.chunk.js": "/auto-rentals-ukraine--o/static/js/266.c18fb188.chunk.js",
+    "static/js/496.2d57c923.chunk.js": "/auto-rentals-ukraine--o/static/js/496.2d57c923.chunk.js",
+    "static/js/705.32f6fbea.chunk.js": "/auto-rentals-ukraine--o/static/js/705.32f6fbea.chunk.js",
+    "index.html": "/auto-rentals-ukraine--o/index.html",
+    "main.1e6c510d.css.map": "/auto-rentals-ukraine--o/static/css/main.1e6c510d.css.map",
+    "main.555ab49b.js.map": "/auto-rentals-ukraine--o/static/js/main.555ab49b.js.map",
+    "266.c18fb188.chunk.js.map": "/auto-rentals-ukraine--o/static/js/266.c18fb188.chunk.js.map",
+    "496.2d57c923.chunk.js.map": "/auto-rentals-ukraine--o/static/js/496.2d57c923.chunk.js.map",
+    "705.32f6fbea.chunk.js.map": "/auto-rentals-ukraine--o/static/js/705.32f6fbea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1e6c510d.css",
-    "static/js/main.c21b8a37.js"
+    "static/js/main.555ab49b.js"
   ]
 }
