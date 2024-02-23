@@ -14,8 +14,6 @@ import { selectNextPage } from 'redux/selectors';
 import { fetchNextAutos } from 'redux/operations';
 import { nanoid } from 'nanoid';
 
-import { AudioItem } from './Loader/Loader';
-
 export const AutosList = () => {
   const autos = useSelector(selectAutos);
   const brandFilter = useSelector(selectBrandFilter);
@@ -52,7 +50,6 @@ export const AutosList = () => {
       <FilterForm />
 
       <AutoList>
-        <AudioItem />
         {filteredAutos.map(auto => {
           return <AutoCard onCard={auto} key={nanoid()} />;
         })}
