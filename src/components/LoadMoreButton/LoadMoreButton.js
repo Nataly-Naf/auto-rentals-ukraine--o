@@ -1,4 +1,4 @@
-const { LoadButton } = require('./LoadMoreButton.styled');
+import { LoadButton } from './LoadMoreButton.styled';
 
 export const LoadMoreButton = () => {
   return <LoadButton>Load more</LoadButton>;

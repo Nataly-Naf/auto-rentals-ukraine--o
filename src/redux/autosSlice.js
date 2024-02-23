@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAutos } from './operations';
+import { fetchAutos, fetchNextAutos } from './operations';
 
 const autosSlice = createSlice({
   name: 'autos',
@@ -8,6 +8,7 @@ const autosSlice = createSlice({
       items: [],
       isLoading: false,
       error: null,
+      nextPage: 1,
     },
     filters: {
       brandFilter: '',
@@ -29,6 +30,19 @@ const autosSlice = createSlice({
     [fetchAutos.rejected](state, action) {
       state.autos.isLoading = false;
       state.autos.error = action.payload;
+    },
+
+    [fetchNextAutos.pending]: state => {
+      state.loading = true;
+    },
+    [fetchNextAutos.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.autos.items.push(...action.payload); // Добавляем новые данные к существующим
+      state.autos.nextPage++;
+    },
+    [fetchNextAutos.rejected]: (state, action) => {
+      state.loading = false;
+      state.error = action.error.message;
     },
   },
   reducers: {

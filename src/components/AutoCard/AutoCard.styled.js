@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const AutoItem = styled.li`
-  position: relative;
   width: 274px;
   min-height: 426px;
   flex-basis: calc((100% - 87px) / 4);
 `;
 export const ImgWrapper = styled.div`
+  position: relative;
   width: 274px;
   height: 268px;
   border-radius: 14px;
@@ -95,6 +95,19 @@ export const Price = styled.p`
 
 export const HeartButton = styled.button`
   position: absolute;
-  top: 0;
-  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: none;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+`;
+
+export const HeartIcon = styled.svg`
+  width: 100%;
+  height: 100%;
 `;

@@ -5,7 +5,13 @@ import { AutoCard } from 'components/AutoCard/AutoCard';
 import { LoadMoreButton } from 'components/LoadMoreButton/LoadMoreButton';
 import { AutoList } from './FavoriteList.styled';
 import { setFavorites } from 'redux/autosSlice';
-// import { selectFilteredContacts } from 'redux/selectors';
+import { FilterForm } from 'components/FormikForm/FormikForm';
+import {
+  selectBrandFilter,
+  selectMaxMileageFilter,
+  selectMinMileageFilter,
+  selectPriceFilter,
+} from 'redux/selectors';
 export const FavoritesList = () => {
   const dispatch = useDispatch();
 
@@ -17,14 +23,38 @@ export const FavoritesList = () => {
     dispatch(setFavorites(favoritesFromStorage));
   }, [dispatch]);
 
+  const brandFilter = useSelector(selectBrandFilter);
+  const priceFilter = useSelector(selectPriceFilter);
+  const minMileage = useSelector(selectMinMileageFilter);
+  const maxMileage = useSelector(selectMaxMileageFilter);
+  const filteredAutos = favoritesAutos.filter(auto => {
+    if (brandFilter && auto.make !== brandFilter) {
+      return false;
+    }
+    if (priceFilter) {
+      const autoPrice = parseFloat(auto.rentalPrice.replace('$', ''));
+      if (autoPrice > parseFloat(priceFilter)) {
+        return false;
+      }
+    }
+    if (minMileage && auto.mileage < parseInt(minMileage, 10)) {
+      return false;
+    }
+    if (maxMileage && auto.mileage > parseInt(maxMileage, 10)) {
+      return false;
+    }
+    return true;
+  });
+
   return (
     <>
+      <FilterForm />
       <AutoList>
-        {favoritesAutos.map(auto => {
+        {filteredAutos.map(auto => {
           return <AutoCard onCard={auto} />;
         })}
       </AutoList>
-      <LoadMoreButton />
+      {filteredAutos.length > 0 && <LoadMoreButton />}
     </>
   );
 };

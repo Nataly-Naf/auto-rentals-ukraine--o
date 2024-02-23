@@ -8,7 +8,15 @@ import {
   setToMileage,
 } from 'redux/autosSlice';
 import arrData from './makes.json';
-
+import {
+  FiltersWrapper,
+  FilterLabel,
+  SearchButton,
+  FilterWrapper,
+  PriceOption,
+  AddWrapper,
+  PlaceholderText,
+} from './FormikForm.styled';
 export const FilterForm = () => {
   const dispatch = useDispatch();
 
@@ -20,6 +28,47 @@ export const FilterForm = () => {
 
     setSubmitting(false);
     resetForm();
+  };
+  const BrandFieldstyles = {
+    width: '224px',
+    height: '48px',
+    backgroundColor: '#f7f7fb',
+    borderRadius: '14px',
+    border: 'none',
+    paddingLeft: '14px',
+  };
+
+  const PriceFieldstyles = {
+    width: '125px',
+    height: '48px',
+    backgroundColor: '#f7f7fb',
+    borderRadius: '14px',
+    border: 'none',
+    paddingLeft: '14px',
+    paddingRight: '14px',
+  };
+
+  const MinMileageFiledstyles = {
+    width: '160px',
+    height: '48px',
+    backgroundColor: '#f7f7fb',
+    borderTopLeftRadius: '14px',
+    borderBottomLeftRadius: '14px',
+    border: 'none',
+    paddingLeft: '14px',
+    paddingRight: '14px',
+  };
+
+  const MaxMileageFiledstyles = {
+    width: '160px',
+    height: '48px',
+    backgroundColor: '#f7f7fb',
+    borderTopRightRadius: '14px',
+    borderBottomRightRadius: '14px',
+    border: 'none',
+    paddingLeft: '14px',
+    paddingRight: '14px',
+    borderLeft: '1px solid rgba(138, 138, 137, 0.2)',
   };
 
   const prices = [];
@@ -37,33 +86,50 @@ export const FilterForm = () => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
-        <Form>
-          <label htmlFor="brand">Find brand:</label>
-          <Field as="select" name="brand">
-            <option value="">Select a brand</option>
-            {arrData.map((brand, index) => (
-              <option key={index} value={brand}>
-                {brand}
-              </option>
-            ))}
-          </Field>
-          <label htmlFor="price">Price/1 hour:</label>
-          <Field as="select" name="price">
-            <option value="">Select a price</option>
-            {prices.map((price, index) => (
-              <option key={index} value={price}>
-                {price}
-              </option>
-            ))}
-          </Field>
-          <label htmlFor="minMileage">Minimum mileage/km:</label>
-          <Field type="text" name="minMileage" />
-          <label htmlFor="maxMileage">Maximum mileage/km:</label>
-          <Field type="text" name="maxMileage" />
-          <button type="submit" disabled={isSubmitting}>
+        <FiltersWrapper>
+          <FilterWrapper>
+            <FilterLabel htmlFor="brand">Car brand:</FilterLabel>
+            <Field style={BrandFieldstyles} as="select" name="brand">
+              <option value="">Enter the text</option>
+              {arrData.map((brand, index) => (
+                <PriceOption key={index} value={brand}>
+                  {brand}
+                </PriceOption>
+              ))}
+            </Field>
+          </FilterWrapper>
+          <FilterWrapper>
+            <FilterLabel htmlFor="price">Price/1 hour:</FilterLabel>
+            <Field style={PriceFieldstyles} as="select" name="price">
+              <option value="">To $</option>
+              {prices.map((price, index) => (
+                <option key={index} value={price}>
+                  {price}
+                </option>
+              ))}
+            </Field>
+          </FilterWrapper>
+          <FilterWrapper>
+            <FilterLabel htmlFor="minMileage">Car mileage/km:</FilterLabel>
+            <AddWrapper>
+              <Field
+                style={MinMileageFiledstyles}
+                type="text"
+                name="minMileage"
+                placeholder="From"
+              />
+              <Field
+                style={MaxMileageFiledstyles}
+                type="text"
+                name="maxMileage"
+                placeholder="To"
+              />
+            </AddWrapper>
+          </FilterWrapper>
+          <SearchButton type="submit" disabled={isSubmitting}>
             Search
-          </button>
-        </Form>
+          </SearchButton>
+        </FiltersWrapper>
       )}
     </Formik>
   );

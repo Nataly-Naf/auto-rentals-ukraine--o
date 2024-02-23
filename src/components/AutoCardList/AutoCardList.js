@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   selectAutos,
   selectBrandFilter,
@@ -7,9 +7,14 @@ import {
   selectPriceFilter,
 } from 'redux/selectors';
 import { AutoCard } from 'components/AutoCard/AutoCard';
-import { AutoList } from './AutoCardList.styled';
-import { LoadMoreButton } from 'components/LoadMoreButton/LoadMoreButton';
+import { AutoList, LoadButton } from './AutoCardList.styled';
 import { FilterForm } from 'components/FormikForm/FormikForm';
+
+import { selectNextPage } from 'redux/selectors';
+import { fetchNextAutos } from 'redux/operations';
+import { nanoid } from 'nanoid';
+
+import { AudioItem } from './Loader/Loader';
 
 export const AutosList = () => {
   const autos = useSelector(selectAutos);
@@ -17,6 +22,12 @@ export const AutosList = () => {
   const priceFilter = useSelector(selectPriceFilter);
   const minMileage = useSelector(selectMinMileageFilter);
   const maxMileage = useSelector(selectMaxMileageFilter);
+  const dispatch = useDispatch();
+  const nextPage = useSelector(selectNextPage);
+
+  const handleLoadMore = () => {
+    dispatch(fetchNextAutos(nextPage));
+  };
   const filteredAutos = autos.filter(auto => {
     if (brandFilter && auto.make !== brandFilter) {
       return false;
@@ -39,12 +50,16 @@ export const AutosList = () => {
   return (
     <>
       <FilterForm />
+
       <AutoList>
+        <AudioItem />
         {filteredAutos.map(auto => {
-          return <AutoCard onCard={auto} />;
+          return <AutoCard onCard={auto} key={nanoid()} />;
         })}
       </AutoList>
-      <LoadMoreButton />
+      {filteredAutos.length > 0 && (
+        <LoadButton onClick={handleLoadMore}>Load</LoadButton>
+      )}
     </>
   );
 };
