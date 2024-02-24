@@ -6,21 +6,29 @@ export const AutoList = styled.ul`
   flex-wrap: wrap;
   gap: 29px;
   padding: 0px;
+  row-gap: 50px;
+  column-gap: 29px;
 `;
 
 export const LoadButton = styled.button`
+  max-width: 100px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #3470ff;
-  color: #ffffff;
-  width: 274px;
-  height: 44px;
+  margin-top: 100px;
 
-  padding: 12px, 99px, 12px, 99px;
-  border-radius: 12px;
+  background-color: transparent;
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 500;
   border: none;
-
   &:hover {
-    background-color: #0b44cd;
+    color: var(--hover-color);
   }
 `;
+
+// export const Wrapper = styled.div`
+//   display: flex;
+//   direction: column;
+//   justify-content: center;
+// `;

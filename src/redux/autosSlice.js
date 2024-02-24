@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAutos, fetchNextAutos } from './operations';
+import { fetchAutos, fetchNextAutos, fetchTotalAutos } from './operations';
 
 const autosSlice = createSlice({
   name: 'autos',
   initialState: {
     autos: {
+      total: [],
       items: [],
       isLoading: false,
       error: null,
@@ -19,6 +20,18 @@ const autosSlice = createSlice({
     favorites: [],
   },
   extraReducers: {
+    [fetchTotalAutos.pending](state) {
+      state.autos.isLoading = true;
+    },
+    [fetchTotalAutos.fulfilled](state, action) {
+      state.autos.isLoading = false;
+      state.autos.error = null;
+      state.autos.total = action.payload; // Общее количество автомобилей
+    },
+    [fetchTotalAutos.rejected](state, action) {
+      state.autos.isLoading = false;
+      state.autos.error = action.payload;
+    },
     [fetchAutos.pending](state, action) {
       state.autos.isLoading = true;
     },

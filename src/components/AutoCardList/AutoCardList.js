@@ -5,6 +5,7 @@ import {
   selectMaxMileageFilter,
   selectMinMileageFilter,
   selectPriceFilter,
+  selectTotalAutos,
 } from 'redux/selectors';
 import { AutoCard } from 'components/AutoCard/AutoCard';
 import { AutoList, LoadButton } from './AutoCardList.styled';
@@ -16,14 +17,18 @@ import { nanoid } from 'nanoid';
 
 export const AutosList = () => {
   const autos = useSelector(selectAutos);
+  const total = useSelector(selectTotalAutos);
+
   const brandFilter = useSelector(selectBrandFilter);
   const priceFilter = useSelector(selectPriceFilter);
   const minMileage = useSelector(selectMinMileageFilter);
   const maxMileage = useSelector(selectMaxMileageFilter);
   const dispatch = useDispatch();
-  const nextPage = useSelector(selectNextPage);
+
+  const page = useSelector(selectNextPage);
 
   const handleLoadMore = () => {
+    const nextPage = page + 1;
     dispatch(fetchNextAutos(nextPage));
   };
   const filteredAutos = autos.filter(auto => {
@@ -44,19 +49,21 @@ export const AutosList = () => {
     }
     return true;
   });
+  const hasMoreAutos = autos.length < total.length;
+  console.log(hasMoreAutos);
 
   return (
-    <>
+    <div>
       <FilterForm />
-
       <AutoList>
         {filteredAutos.map(auto => {
           return <AutoCard onCard={auto} key={nanoid()} />;
         })}
       </AutoList>
-      {filteredAutos.length > 0 && (
+
+      {filteredAutos.length > 0 && hasMoreAutos && (
         <LoadButton onClick={handleLoadMore}>Load</LoadButton>
       )}
-    </>
+    </div>
   );
 };

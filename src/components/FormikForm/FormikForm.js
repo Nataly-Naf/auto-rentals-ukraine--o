@@ -15,8 +15,8 @@ import {
   FilterWrapper,
   PriceOption,
   AddWrapper,
-  PlaceholderText,
 } from './FormikForm.styled';
+import Select from 'react-select';
 export const FilterForm = () => {
   const dispatch = useDispatch();
 

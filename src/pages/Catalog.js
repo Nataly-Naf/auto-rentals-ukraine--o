@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAutos } from 'redux/operations';
+import { fetchAutos, fetchTotalAutos } from 'redux/operations';
 import { selectError, selectIsLoading } from 'redux/selectors';
-
 import { AutosList } from 'components/AutoCardList/AutoCardList';
 
 export default function Contacts() {
@@ -12,6 +11,10 @@ export default function Contacts() {
 
   useEffect(() => {
     dispatch(fetchAutos());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(fetchTotalAutos());
   }, [dispatch]);
 
   return (
