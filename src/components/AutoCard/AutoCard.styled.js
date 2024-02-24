@@ -37,6 +37,10 @@ export const NameWrapper = styled.div`
 export const TagWrapper = styled.div`
   display: flex;
   margin-bottom: 28px;
+  height: 43px;
+  overflow: hidden;
+  gap: 6px;
+  flex-wrap: wrap;
   font-family: Manrope;
   font-size: 12px;
   font-weight: 400;
@@ -110,4 +114,10 @@ export const HeartButton = styled.button`
 export const HeartIcon = styled.svg`
   width: 100%;
   height: 100%;
+`;
+
+export const Divider = styled.div`
+  width: 0px;
+  height: 16px;
+  border: 1px solid rgba(18, 20, 23, 0.1);
 `;

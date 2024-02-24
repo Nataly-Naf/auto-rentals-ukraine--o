@@ -54,7 +54,6 @@ export const FavoritesList = () => {
           return <AutoCard onCard={auto} />;
         })}
       </AutoList>
-      {filteredAutos.length > 0 && <LoadMoreButton />}
     </>
   );
 };

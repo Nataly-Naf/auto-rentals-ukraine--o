@@ -15,6 +15,7 @@ import {
   Price,
   HeartButton,
   HeartIcon,
+  Divider,
 } from './AutoCard.styled';
 import {
   addToFavorites,
@@ -116,9 +117,10 @@ export const AutoCard = ({ onCard }) => {
       </InfoWrapper>
 
       <TagWrapper>
-        {city} | {country} | {onCard.rentalCompany} | {onCard.rentalCompany} |
-        {onCard.rentalCompany} | {onCard.model} | {onCard.id} |{' '}
-        {onCard.functionalities[0]}`
+        {city} <Divider /> {country} <Divider /> {onCard.rentalCompany}{' '}
+        <Divider /> {onCard.type} <Divider /> {onCard.model} <Divider />{' '}
+        {onCard.id} <Divider />{' '}
+        {onCard.functionalities[1].split(' ').slice(0, 2).join(' ')}
       </TagWrapper>
       <LearnMoreButton onClick={openModal}>Learn more</LearnMoreButton>
       <Modal
