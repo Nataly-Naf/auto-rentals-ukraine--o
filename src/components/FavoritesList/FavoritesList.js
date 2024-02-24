@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { selectFavorites } from 'redux/selectors';
 import { AutoCard } from 'components/AutoCard/AutoCard';
-import { LoadMoreButton } from 'components/LoadMoreButton/LoadMoreButton';
 import { AutoList } from './FavoriteList.styled';
 import { setFavorites } from 'redux/autosSlice';
 import { FilterForm } from 'components/FormikForm/FormikForm';
