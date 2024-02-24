@@ -50,7 +50,6 @@ export const AutosList = () => {
     return true;
   });
   const hasMoreAutos = autos.length < total.length;
-  console.log(hasMoreAutos);
 
   return (
     <div>

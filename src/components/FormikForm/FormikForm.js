@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Field } from 'formik';
 import { useDispatch } from 'react-redux';
 import {
   setBrandFilter,
@@ -16,7 +16,6 @@ import {
   PriceOption,
   AddWrapper,
 } from './FormikForm.styled';
-import Select from 'react-select';
 export const FilterForm = () => {
   const dispatch = useDispatch();
 
