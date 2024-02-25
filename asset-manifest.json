@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/auto-rentals-ukraine--o/static/css/main.f8efea9f.css",
-    "main.js": "/auto-rentals-ukraine--o/static/js/main.03b1dbfa.js",
-    "static/js/266.c18fb188.chunk.js": "/auto-rentals-ukraine--o/static/js/266.c18fb188.chunk.js",
+    "main.css": "/auto-rentals-ukraine--o/static/css/main.721c4648.css",
+    "main.js": "/auto-rentals-ukraine--o/static/js/main.81342547.js",
+    "static/js/266.beaedb38.chunk.js": "/auto-rentals-ukraine--o/static/js/266.beaedb38.chunk.js",
     "static/js/636.7d480327.chunk.js": "/auto-rentals-ukraine--o/static/js/636.7d480327.chunk.js",
     "static/js/399.b654673c.chunk.js": "/auto-rentals-ukraine--o/static/js/399.b654673c.chunk.js",
     "static/js/474.0d871b60.chunk.js": "/auto-rentals-ukraine--o/static/js/474.0d871b60.chunk.js",
     "static/js/981.1b2e59b0.chunk.js": "/auto-rentals-ukraine--o/static/js/981.1b2e59b0.chunk.js",
     "index.html": "/auto-rentals-ukraine--o/index.html",
-    "main.f8efea9f.css.map": "/auto-rentals-ukraine--o/static/css/main.f8efea9f.css.map",
-    "main.03b1dbfa.js.map": "/auto-rentals-ukraine--o/static/js/main.03b1dbfa.js.map",
-    "266.c18fb188.chunk.js.map": "/auto-rentals-ukraine--o/static/js/266.c18fb188.chunk.js.map",
+    "main.721c4648.css.map": "/auto-rentals-ukraine--o/static/css/main.721c4648.css.map",
+    "main.81342547.js.map": "/auto-rentals-ukraine--o/static/js/main.81342547.js.map",
+    "266.beaedb38.chunk.js.map": "/auto-rentals-ukraine--o/static/js/266.beaedb38.chunk.js.map",
     "636.7d480327.chunk.js.map": "/auto-rentals-ukraine--o/static/js/636.7d480327.chunk.js.map",
     "399.b654673c.chunk.js.map": "/auto-rentals-ukraine--o/static/js/399.b654673c.chunk.js.map",
     "474.0d871b60.chunk.js.map": "/auto-rentals-ukraine--o/static/js/474.0d871b60.chunk.js.map",
     "981.1b2e59b0.chunk.js.map": "/auto-rentals-ukraine--o/static/js/981.1b2e59b0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8efea9f.css",
-    "static/js/main.03b1dbfa.js"
+    "static/css/main.721c4648.css",
+    "static/js/main.81342547.js"
   ]
 }
