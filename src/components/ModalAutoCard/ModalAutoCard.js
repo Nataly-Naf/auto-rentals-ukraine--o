@@ -22,8 +22,8 @@ import {
   Function,
   RentalCondWrapper,
   Condition,
-  CloseBtn,
   RentalButton,
+  CloseIcon,
 } from './ModalAutoCard.styled';
 
 Modal.setAppElement('#root');
@@ -124,9 +124,7 @@ export const ModalAutoCard = ({ onCard, closeModal, isModalOpen }) => {
         </Condition>
       </RentalCondWrapper>
 
-      <CloseBtn onClick={closeModal}>
-        <IoClose style={{ width: '23px', height: '23px' }} />
-      </CloseBtn>
+      <CloseIcon onClick={closeModal} />
       <RentalButton>
         <a
           href="tel:+380730000000"

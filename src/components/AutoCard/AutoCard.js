@@ -34,6 +34,7 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
+    maxHeight: '95%',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     padding: 0,

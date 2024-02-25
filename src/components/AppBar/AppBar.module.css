@@ -1,5 +1,7 @@
 .header {
   display: flex;
+  max-width: 1440px;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
@@ -11,6 +13,7 @@
   padding: 12px;
   font-weight: 700;
   color: var(--main-dark-font-color);
+  transition: all var(--transition-main);
 }
 
 .link:hover,

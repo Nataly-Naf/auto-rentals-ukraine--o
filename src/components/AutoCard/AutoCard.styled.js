@@ -59,9 +59,10 @@ export const LearnMoreButton = styled.button`
   padding: 12px, 99px, 12px, 99px;
   border-radius: 12px;
   border: none;
+  transition: all var(--transition-main);
 
   &:hover {
-    background-color: #0b44cd;
+    background-color: var(--hover-color);
   }
 `;
 

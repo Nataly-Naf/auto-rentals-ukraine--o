@@ -7,6 +7,8 @@ export const FiltersWrapper = styled(Form)`
   gap: 18px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
 `;
 
 export const FilterWrapper = styled.div`
@@ -36,17 +38,18 @@ export const FilterBrandField = styled(Field)`
 export const SearchButton = styled.button`
   width: 136px;
   height: 48px;
-  background-color: #3470ff;
+  background-color: var(--accent-color);
   padding: 14, 44;
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--main-light-font-color);
   border-radius: 12px;
   border: none;
   align-self: flex-end;
+  transition: all var(--transition-main);
 
   &:hover {
-    background-color: #0b44cd;
+    background-color: var(--hover-color);
   }
 `;
 export const PriceOption = styled.option`
@@ -58,9 +61,6 @@ export const PriceOption = styled.option`
   text-align: left;
   color: #12141733;
   opacity: 0.2;
-  //   margin-bottom: 8px;
-  //   padding-left: 14px;
-  //   margn-top: 8px;
 `;
 
 export const AddWrapper = styled.div`

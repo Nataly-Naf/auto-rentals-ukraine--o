@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IoClose } from 'react-icons/io5';
 
 export const AutoItem = styled.div`
   position: relative;
@@ -174,5 +175,20 @@ export const RentalButton = styled.button`
 
   &:hover {
     background-color: var(--hover-color);
+  }
+`;
+
+export const CloseIcon = styled(IoClose)`
+  stroke: var(--main-dark-font-color);
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+
+  transition: all var(--transition-main);
+
+  &:hover {
+    transform: rotate(90deg);
+    color: var(--accent-color);
   }
 `;
