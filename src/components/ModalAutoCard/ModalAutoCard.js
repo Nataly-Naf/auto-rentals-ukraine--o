@@ -1,6 +1,5 @@
 import Modal from 'react-modal';
 import React from 'react';
-import { IoClose } from 'react-icons/io5';
 
 import {
   AutoItem,
