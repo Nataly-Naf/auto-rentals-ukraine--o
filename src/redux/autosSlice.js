@@ -9,7 +9,6 @@ const autosSlice = createSlice({
       items: [],
       isLoading: false,
       error: null,
-      nextPage: 1,
     },
     filters: {
       brandFilter: '',
@@ -51,7 +50,6 @@ const autosSlice = createSlice({
     [fetchNextAutos.fulfilled]: (state, action) => {
       state.loading = false;
       state.autos.items.push(...action.payload);
-      state.autos.nextPage++;
     },
     [fetchNextAutos.rejected]: (state, action) => {
       state.loading = false;

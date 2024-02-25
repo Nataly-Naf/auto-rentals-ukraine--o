@@ -3,16 +3,18 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-  border-bottom: 1px solid #2a363b;
+  border-bottom: 2px solid var(--accent-color);
 }
 .link {
   display: inline-block;
   text-decoration: none;
   padding: 12px;
   font-weight: 700;
-  color: #2a363b;
+  color: var(--main-dark-font-color);
 }
 
-.link.active {
-  color: #e84a5f;
+.link:hover,
+.link:focus,
+.link:active {
+  color: var(--hover-color);
 }

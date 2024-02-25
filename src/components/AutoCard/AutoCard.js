@@ -47,7 +47,6 @@ export const AutoCard = ({ onCard }) => {
   const favoritesAutos = useSelector(selectFavorites);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // console.log(isModalOpen);
 
   useEffect(() => {
     const favoritesFromStorage =
@@ -77,8 +76,6 @@ export const AutoCard = ({ onCard }) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
-  // console.log(closeModal);
 
   const address = onCard.address;
   const parts = address.split(',');

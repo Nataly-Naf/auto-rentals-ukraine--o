@@ -88,7 +88,12 @@ export const FilterForm = () => {
         <FiltersWrapper>
           <FilterWrapper>
             <FilterLabel htmlFor="brand">Car brand:</FilterLabel>
-            <Field style={BrandFieldstyles} as="select" name="brand">
+            <Field
+              style={BrandFieldstyles}
+              as="select"
+              name="brand"
+              placeholder="Enter the text"
+            >
               <option value="">Enter the text</option>
               {arrData.map((brand, index) => (
                 <PriceOption key={index} value={brand}>
@@ -102,9 +107,9 @@ export const FilterForm = () => {
             <Field style={PriceFieldstyles} as="select" name="price">
               <option value="">To $</option>
               {prices.map((price, index) => (
-                <option key={index} value={price}>
+                <PriceOption key={index} value={price}>
                   {price}
-                </option>
+                </PriceOption>
               ))}
             </Field>
           </FilterWrapper>

@@ -22,13 +22,8 @@ export const LoadButton = styled.button`
   font-size: 16px;
   font-weight: 500;
   border: none;
+  cursor: pointer;
   &:hover {
     color: var(--hover-color);
   }
 `;
-
-// export const Wrapper = styled.div`
-//   display: flex;
-//   direction: column;
-//   justify-content: center;
-// `;

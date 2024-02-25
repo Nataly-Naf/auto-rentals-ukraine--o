@@ -15,7 +15,6 @@ export const FavoritesList = () => {
   const dispatch = useDispatch();
 
   const favoritesAutos = useSelector(selectFavorites);
-  console.log(favoritesAutos);
   useEffect(() => {
     const favoritesFromStorage =
       JSON.parse(localStorage.getItem('favorites')) || [];
@@ -50,7 +49,7 @@ export const FavoritesList = () => {
       <FilterForm />
       <AutoList>
         {filteredAutos.map(auto => {
-          return <AutoCard onCard={auto} />;
+          return <AutoCard key={auto.id} onCard={auto} />;
         })}
       </AutoList>
     </>

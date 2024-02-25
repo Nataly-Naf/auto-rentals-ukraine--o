@@ -159,7 +159,7 @@ export const CloseBtn = styled.button`
   background: none;
   cursor: pointer;
   &:hover {
-    fill: var(--accent-color); /* Новый цвет текста при наведении */
+    fill: var(--accent-color);
   }
 `;
 

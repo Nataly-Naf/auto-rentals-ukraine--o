@@ -9,4 +9,3 @@ export const selectBrandFilter = state => state.autos.filters.brandFilter;
 export const selectPriceFilter = state => state.autos.filters.priceFilter;
 export const selectMinMileageFilter = state => state.autos.filters.fromMileage;
 export const selectMaxMileageFilter = state => state.autos.filters.toMileage;
-export const selectNextPage = state => state.autos.autos.nextPage;

@@ -68,25 +68,8 @@ export const AddWrapper = styled.div`
   display: flex;
 `;
 
-export const PlaceholderText = styled.span`
+export const PlaceholderText = styled.option`
   color: rgba(18, 20, 23, 1);
-`;
-export const BrandSelect = styled(Select)`
-  .react-select__control {
-    width: 224px;
-    height: 48px;
-    background-color: #f7f7fb;
-    border-radius: 14px;
-    border: none;
-    padding-left: 14px;
-  }
-
-  .react-select__placeholder {
-    color: #808080;
-  }
-
-  .react-select__menu {
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+  font-size: 18px;
+  font-weight: 500;
 `;
