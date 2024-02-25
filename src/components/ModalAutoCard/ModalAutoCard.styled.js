@@ -118,7 +118,9 @@ export const Subtitle = styled.h3`
 export const FunctionalitiesLine1 = styled.div`
   display: flex;
   gap: 6px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  row-gap: 4px;
+  flex-wrap: wrap;
 `;
 export const FunctionalitiesLine2 = styled.div`
   display: flex;
