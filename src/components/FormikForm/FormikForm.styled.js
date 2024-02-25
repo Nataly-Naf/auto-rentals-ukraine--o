@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Form, Field } from 'formik';
-import Select from 'react-select';
 
 export const FiltersWrapper = styled(Form)`
   display: flex;
