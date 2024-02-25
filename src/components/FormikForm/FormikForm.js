@@ -16,6 +16,7 @@ import {
   PriceOption,
   AddWrapper,
 } from './FormikForm.styled';
+
 export const FilterForm = () => {
   const dispatch = useDispatch();
 
