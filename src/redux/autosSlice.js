@@ -26,7 +26,7 @@ const autosSlice = createSlice({
     [fetchTotalAutos.fulfilled](state, action) {
       state.autos.isLoading = false;
       state.autos.error = null;
-      state.autos.total = action.payload; // Общее количество автомобилей
+      state.autos.total = action.payload;
     },
     [fetchTotalAutos.rejected](state, action) {
       state.autos.isLoading = false;
@@ -50,7 +50,7 @@ const autosSlice = createSlice({
     },
     [fetchNextAutos.fulfilled]: (state, action) => {
       state.loading = false;
-      state.autos.items.push(...action.payload); // Добавляем новые данные к существующим
+      state.autos.items.push(...action.payload);
       state.autos.nextPage++;
     },
     [fetchNextAutos.rejected]: (state, action) => {
@@ -80,7 +80,7 @@ const autosSlice = createSlice({
       );
     },
     setFavorites(state, action) {
-      state.favorites = action.payload; // установка списка избранных автомобилей из локального хранилища
+      state.favorites = action.payload;
     },
   },
 });
