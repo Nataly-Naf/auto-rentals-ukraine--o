@@ -4,7 +4,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'var(--accent-color)',
+    backgroundColor: 'red',
   },
   title: {
     width: 400,
